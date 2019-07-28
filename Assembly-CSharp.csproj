@@ -69,7 +69,9 @@
     <Compile Include="Assets\Banana Jump\Scripts\Gameplay\PlatformScript.cs" />
     <Compile Include="Assets\Banana Jump\Scripts\Gameplay\PlatformSpawner.cs" />
     <Compile Include="Assets\Banana Jump\Scripts\Gameplay\PlayerController.cs" />
-    <Compile Include="Assets\Banana Jump\Scripts\Main Menu\PlayButton.cs" />
+    <Compile Include="Assets\Banana Jump\Scripts\Gameplay\TouchInputs.cs" />
+    <Compile Include="Assets\Banana Jump\Scripts\UI\PlayButton.cs" />
+    <Compile Include="Assets\Banana Jump\Scripts\UI\RestartButton.cs" />
     <Compile Include="Assets\Makaka Games\Mobile Game Icon Pack\Scripts\SampleControl.cs" />
     <None Include="Assets\Makaka Games\Mobile Game Icon Pack\Fonts\Font_Read_Me.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />

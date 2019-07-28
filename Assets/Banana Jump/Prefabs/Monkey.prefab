@@ -141,6 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a85fd3338b227d442a18a829bb3237b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myBody: {fileID: 0}
   movementSpeed: 3
   normalPush: 10
   extraPush: 14
+  leftButton: {fileID: 0}
+  rightButton: {fileID: 0}
+  restartButton: {fileID: 0}

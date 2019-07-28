@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Android;
 
 public class PlayerController : MonoBehaviour
 {
-
-    private Rigidbody2D myBody;
+    [HideInInspector]
+    public Rigidbody2D myBody;
     private bool initialPush;
     private int pushCount;
     private bool isDead;
@@ -14,16 +16,23 @@ public class PlayerController : MonoBehaviour
     public float normalPush = 10f;
     public float extraPush = 14f;
 
-    // Start is called before the first frame update
+    public Button leftButton, rightButton;
+
+    public RestartButton restartButton;
+
     void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         Move();
+    }
+
+    private void Update()
+    {
+
     }
 
     void Move()
@@ -39,6 +48,22 @@ public class PlayerController : MonoBehaviour
         {
             myBody.velocity = new Vector2(-movementSpeed, myBody.velocity.y);
         }
+    }
+
+    public void TouchLeft()
+    {
+        if (isDead)
+            return;
+
+        myBody.velocity = new Vector2(-movementSpeed, myBody.velocity.y);
+    }
+
+    public void TouchRight()
+    {
+        if (isDead)
+            return;
+
+        myBody.velocity = new Vector2(movementSpeed, myBody.velocity.y);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -91,7 +116,7 @@ public class PlayerController : MonoBehaviour
 
             //Play Sound
 
-            GameManager.instance.RestartGame();
+            restartButton.ShowRestart();
         }
     }
 }
