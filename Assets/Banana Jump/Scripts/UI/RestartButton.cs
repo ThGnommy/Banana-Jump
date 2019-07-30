@@ -21,4 +21,9 @@ public class RestartButton : MonoBehaviour
     {
         GameManager.instance.LoadGame();
     }
+
+    public void GoHome()
+    {
+        GameManager.instance.MainMenu();
+    }
 }
