@@ -6,11 +6,13 @@ using UnityEngine.Android;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     [HideInInspector]
     public Rigidbody2D myBody;
     private bool initialPush;
     private int pushCount;
-    private bool isDead;
+    public bool isDead;
 
     public float movementSpeed = 2f;
     public float normalPush = 10f;
@@ -22,6 +24,9 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        if (instance == null)
+            instance = this;
+
         myBody = GetComponent<Rigidbody2D>();
     }
 

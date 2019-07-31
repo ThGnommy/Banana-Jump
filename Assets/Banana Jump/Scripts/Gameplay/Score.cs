@@ -8,30 +8,37 @@ public class Score : MonoBehaviour
     public GameObject player;
 
     public static int score = 0;
-    int currentScore;
-    Vector2 _lastPos;
+    int tempValue = 0;
+
+    Vector2 lastPosition;
 
     // Start is called before the first frame update
     void Start()
     {
         scoreText = GetComponent<TextMeshProUGUI>();
-        score = 0;
-        _lastPos = player.transform.position;
+        score = PlayerPrefs.GetInt("score", 0);
+        lastPosition = player.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if((player.transform.position.y - _lastPos.y) > 0)
+        if ((player.transform.position.y - lastPosition.y) > 0)
         {
-            score++;
-            _lastPos = player.transform.position;
-            PlayerPrefs.SetInt("score", score);
+            tempValue++;
+            lastPosition = player.transform.position;
+
+            if (tempValue >= score)
+            {
+                score = tempValue;
+                PlayerPrefs.SetInt("score", score);
+                Debug.Log("Beeest Scooore!");
+            }
         }
     }
 
     private void OnGUI()
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + tempValue;
     }
 }
