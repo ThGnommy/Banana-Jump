@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Banana Jump\Scripts\Gameplay\AudioManager.cs" />
     <Compile Include="Assets\Banana Jump\Scripts\Gameplay\BestScore.cs" />
     <Compile Include="Assets\Banana Jump\Scripts\Gameplay\BGSpawner.cs" />
     <Compile Include="Assets\Banana Jump\Scripts\Gameplay\CameraFollow.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Banana Jump\Scripts\UI\PlayButton.cs" />
     <Compile Include="Assets\Banana Jump\Scripts\UI\RestartButton.cs" />
     <Compile Include="Assets\Makaka Games\Mobile Game Icon Pack\Scripts\SampleControl.cs" />
+    <Compile Include="Assets\MusicController.cs" />
     <None Include="Assets\Makaka Games\Mobile Game Icon Pack\Fonts\Font_Read_Me.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
