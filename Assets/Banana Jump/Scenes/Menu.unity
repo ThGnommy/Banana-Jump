@@ -1258,6 +1258,54 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1559556869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1559556871}
+  - component: {fileID: 1559556870}
+  m_Layer: 0
+  m_Name: MusicController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1559556870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559556869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf6bbe64584c9e445816d563d8e7a044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenuSnapshot: {fileID: 24500006, guid: 2f118598046658540a61ae33a294135b, type: 2}
+  InGameSnapshot: {fileID: 8454415667075555981, guid: 2f118598046658540a61ae33a294135b,
+    type: 2}
+  inMenu: 0
+  inGame: 0
+--- !u!4 &1559556871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559556869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1731383214
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,22 +1451,22 @@ PrefabInstance:
     - target: {fileID: 5756960394963158836, guid: dd46c09ad32ee9a4ca6d1331938e5d9e,
         type: 3}
       propertyPath: m_Name
-      value: MusicController
+      value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 5756960394963158833, guid: dd46c09ad32ee9a4ca6d1331938e5d9e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 889.52216
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5756960394963158833, guid: dd46c09ad32ee9a4ca6d1331938e5d9e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 911.1122
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5756960394963158833, guid: dd46c09ad32ee9a4ca6d1331938e5d9e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -350.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5756960394963158833, guid: dd46c09ad32ee9a4ca6d1331938e5d9e,
         type: 3}

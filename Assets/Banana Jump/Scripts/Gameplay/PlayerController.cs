@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D myBody;
     private bool initialPush;
     private int pushCount;
-    public bool isDead;
+    public static bool isDead;
 
     public float movementSpeed = 2f;
     public float normalPush = 10f;
@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
                 myBody.velocity = new Vector2(myBody.velocity.x, 18f);
                 collision.gameObject.SetActive(false);
 
-                // Play Sound
+                // Play jump sound
 
                 return;
             }
@@ -120,6 +120,7 @@ public class PlayerController : MonoBehaviour
             isDead = true;
 
             //Play Sound
+            FindObjectOfType<AudioManager>().Play("PlayerDeath");
 
             restartButton.ShowRestart();
         }

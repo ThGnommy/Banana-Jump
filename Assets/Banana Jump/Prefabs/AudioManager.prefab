@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5756960394963158836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5756960394963158833}
+  - component: {fileID: 5756960394963158834}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5756960394963158833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5756960394963158836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 889.52216, y: 911.1122, z: -350.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5756960394963158834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5756960394963158836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a63936f5bc0bc6447a9ccb81515d9b9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Marimba
+    loop: 1
+    clip: {fileID: 8300000, guid: 2c96f143ae8ebfe43985629757894d04, type: 3}
+    source: {fileID: 0}
+    mixerGroup: {fileID: 4913316069290045700, guid: 2f118598046658540a61ae33a294135b,
+      type: 2}
+  - name: Shakers
+    loop: 1
+    clip: {fileID: 8300000, guid: bc55a650f76a5b64280c91a9364984cc, type: 3}
+    source: {fileID: 0}
+    mixerGroup: {fileID: 5773578293306107468, guid: 2f118598046658540a61ae33a294135b,
+      type: 2}
+  - name: Jungle Amb
+    loop: 1
+    clip: {fileID: 8300000, guid: 9d8bdf7a72a95e54abf486779b59e3cc, type: 3}
+    source: {fileID: 0}
+    mixerGroup: {fileID: -4183131214772167104, guid: 2f118598046658540a61ae33a294135b,
+      type: 2}
+  - name: Monkeys
+    loop: 1
+    clip: {fileID: 8300000, guid: a9f32482deb4cff4188835cab99c178f, type: 3}
+    source: {fileID: 0}
+    mixerGroup: {fileID: -4183131214772167104, guid: 2f118598046658540a61ae33a294135b,
+      type: 2}
+  - name: PlayerDeath
+    loop: 0
+    clip: {fileID: 8300000, guid: e04bea70174fcc64dab0cfa95e216d82, type: 3}
+    source: {fileID: 0}
+    mixerGroup: {fileID: -410482840042220503, guid: 2f118598046658540a61ae33a294135b,
+      type: 2}
