@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D myBody;
     private bool initialPush;
     private int pushCount;
-    public static bool isDead;
+    public bool isDead;
 
     public float movementSpeed = 2f;
     public float normalPush = 10f;

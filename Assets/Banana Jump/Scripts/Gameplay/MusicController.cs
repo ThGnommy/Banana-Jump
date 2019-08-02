@@ -8,8 +8,9 @@ public class MusicController : MonoBehaviour
 {
     public AudioMixerSnapshot MenuSnapshot;
     public AudioMixerSnapshot InGameSnapshot;
+    public AudioMixerSnapshot DeathSnapshot;
 
-    public bool inMenu, inGame;
+    public bool inMenu, inGame, playerAlive;
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -20,6 +21,7 @@ public class MusicController : MonoBehaviour
     {
         inMenu = false;
         inGame = false;
+        playerAlive = true;
         FindObjectOfType<AudioManager>().Play("Jungle Amb");
         FindObjectOfType<AudioManager>().Play("Monkeys");
     }
@@ -47,6 +49,23 @@ public class MusicController : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("Shakers");
                 inGame = true;
                 inMenu = false;
+            }
+        }
+
+        if(SceneManager.GetActiveScene().name == "Game" && PlayerController.instance.isDead)
+        {
+            if(playerAlive)
+            {
+                DeathSnapshot.TransitionTo(1f);
+                playerAlive = false;
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "Game" && !PlayerController.instance.isDead)
+        {
+            if (!playerAlive)
+            {
+                InGameSnapshot.TransitionTo(1f);
+                playerAlive = true;
             }
         }
     }
