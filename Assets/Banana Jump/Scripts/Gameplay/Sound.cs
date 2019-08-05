@@ -6,7 +6,7 @@ public class Sound
 {
     public string name;
     public bool loop;
-    public AudioClip clip;
+    public AudioClip[] clip;
 
     [HideInInspector]
     public AudioSource source;

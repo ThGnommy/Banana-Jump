@@ -9,12 +9,14 @@ public class Score : MonoBehaviour
 
     public static int score = 0;
     int tempValue = 0;
+    bool highScoreSound = false;
 
     Vector2 lastPosition;
 
     // Start is called before the first frame update
     void Start()
     {
+        //PlayerPrefs.DeleteAll();
         scoreText = GetComponent<TextMeshProUGUI>();
         score = PlayerPrefs.GetInt("score", 0);
         lastPosition = player.transform.position;
@@ -32,7 +34,12 @@ public class Score : MonoBehaviour
             {
                 score = tempValue;
                 PlayerPrefs.SetInt("score", score);
-                Debug.Log("Beeest Scooore!");
+
+                if (PlayerController.instance.HasPlayed == 1 && !highScoreSound)
+                {
+                    highScoreSound = true;
+                    FindObjectOfType<AudioManager>().Play("High Score");
+                }
             }
         }
     }

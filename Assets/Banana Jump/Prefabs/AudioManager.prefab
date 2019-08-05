@@ -46,31 +46,55 @@ MonoBehaviour:
   sounds:
   - name: Marimba
     loop: 1
-    clip: {fileID: 8300000, guid: 2c96f143ae8ebfe43985629757894d04, type: 3}
+    clip:
+    - {fileID: 8300000, guid: 954fb8ad260a4264aad2c2889357e787, type: 3}
     source: {fileID: 0}
     mixerGroup: {fileID: 4913316069290045700, guid: 2f118598046658540a61ae33a294135b,
       type: 2}
   - name: Shakers
     loop: 1
-    clip: {fileID: 8300000, guid: bc55a650f76a5b64280c91a9364984cc, type: 3}
+    clip:
+    - {fileID: 8300000, guid: c375625e4ce1cf14381903e3ec99c9fa, type: 3}
     source: {fileID: 0}
     mixerGroup: {fileID: 5773578293306107468, guid: 2f118598046658540a61ae33a294135b,
       type: 2}
   - name: Jungle Amb
     loop: 1
-    clip: {fileID: 8300000, guid: 9d8bdf7a72a95e54abf486779b59e3cc, type: 3}
+    clip:
+    - {fileID: 8300000, guid: 9d8bdf7a72a95e54abf486779b59e3cc, type: 3}
     source: {fileID: 0}
     mixerGroup: {fileID: -4183131214772167104, guid: 2f118598046658540a61ae33a294135b,
       type: 2}
   - name: Monkeys
     loop: 1
-    clip: {fileID: 8300000, guid: a9f32482deb4cff4188835cab99c178f, type: 3}
+    clip:
+    - {fileID: 8300000, guid: a9f32482deb4cff4188835cab99c178f, type: 3}
     source: {fileID: 0}
     mixerGroup: {fileID: -4183131214772167104, guid: 2f118598046658540a61ae33a294135b,
       type: 2}
   - name: PlayerDeath
     loop: 0
-    clip: {fileID: 8300000, guid: e04bea70174fcc64dab0cfa95e216d82, type: 3}
+    clip:
+    - {fileID: 8300000, guid: e04bea70174fcc64dab0cfa95e216d82, type: 3}
     source: {fileID: 0}
-    mixerGroup: {fileID: -410482840042220503, guid: 2f118598046658540a61ae33a294135b,
+    mixerGroup: {fileID: 6371216739873143541, guid: 2f118598046658540a61ae33a294135b,
+      type: 2}
+  - name: Jump
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: d66a1ec201fc8844d97c671c3b4e33d2, type: 3}
+    - {fileID: 8300000, guid: cf9a2afdff1898b409d285668696853a, type: 3}
+    - {fileID: 8300000, guid: ddd308d1b8ea98748867fc2b5a0b1f58, type: 3}
+    - {fileID: 8300000, guid: 9343c6fe4b6e8fd4bab91e968010ed31, type: 3}
+    - {fileID: 8300000, guid: 1cbf15cead3551d49b293d6a3cf881ae, type: 3}
+    - {fileID: 8300000, guid: 9476a54ebec509544b82d7e39ff32b99, type: 3}
+    source: {fileID: 0}
+    mixerGroup: {fileID: 3300510141511607039, guid: 2f118598046658540a61ae33a294135b,
+      type: 2}
+  - name: High Score
+    loop: 0
+    clip:
+    - {fileID: 8300000, guid: 5d3b002182270294fa4fd73c29fd3910, type: 3}
+    source: {fileID: 0}
+    mixerGroup: {fileID: 8267102554008501609, guid: 2f118598046658540a61ae33a294135b,
       type: 2}

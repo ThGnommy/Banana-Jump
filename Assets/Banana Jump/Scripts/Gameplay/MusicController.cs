@@ -11,8 +11,17 @@ public class MusicController : MonoBehaviour
     public AudioMixerSnapshot DeathSnapshot;
 
     public bool inMenu, inGame, playerAlive;
+
+    public static MusicController instance;
     private void Awake()
     {
+        if (instance == null)
+            instance = this;
+        else
+        {
+            Destroy(gameObject);
+        }
+
         DontDestroyOnLoad(gameObject);
     }
 
@@ -60,6 +69,7 @@ public class MusicController : MonoBehaviour
                 playerAlive = false;
             }
         }
+
         else if (SceneManager.GetActiveScene().name == "Game" && !PlayerController.instance.isDead)
         {
             if (!playerAlive)

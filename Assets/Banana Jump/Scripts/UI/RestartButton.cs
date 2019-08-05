@@ -5,7 +5,15 @@ using UnityEngine;
 public class RestartButton : MonoBehaviour
 {
     public GameObject restartButton;
+    AudioSource audioSource;
+
     WaitForSeconds wait = new WaitForSeconds(2);
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     public void ShowRestart()
     {
         StartCoroutine(WaitForRestart());
@@ -20,10 +28,12 @@ public class RestartButton : MonoBehaviour
     public void RestartTheGame()
     {
         GameManager.instance.LoadGame();
+        audioSource.Play();
     }
 
     public void GoHome()
     {
         GameManager.instance.MainMenu();
+        audioSource.Play();
     }
 }

@@ -6,16 +6,19 @@ public class PlayButton : MonoBehaviour
 {
     public Animator anim;
     GameManager gameManager;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         anim.GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void StartTheGame()
     {
         StartCoroutine(PlayTheGame());
+        audioSource.Play();
     }
 
     public void DisableMenu()

@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public float normalPush = 10f;
     public float extraPush = 14f;
 
+    public int HasPlayed;
+
     public Button leftButton, rightButton;
 
     public RestartButton restartButton;
@@ -26,18 +28,23 @@ public class PlayerController : MonoBehaviour
     {
         if (instance == null)
             instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
 
         myBody = GetComponent<Rigidbody2D>();
+    }
+
+    void Start()
+    {
+        HasPlayed = PlayerPrefs.GetInt("HasPlayed", 0);   
     }
 
     void FixedUpdate()
     {
         Move();
-    }
-
-    private void Update()
-    {
-
     }
 
     void Move()
@@ -85,6 +92,7 @@ public class PlayerController : MonoBehaviour
                 collision.gameObject.SetActive(false);
 
                 // Play jump sound
+                FindObjectOfType<AudioManager>().PlayOneShot("Jump");
 
                 return;
             }
@@ -96,7 +104,10 @@ public class PlayerController : MonoBehaviour
             collision.gameObject.SetActive(false);
 
             pushCount++;
+
             // Play Sound
+            FindObjectOfType<AudioManager>().PlayOneShot("Jump");
+
         }
 
         if (collision.tag == "ExtraPush")
@@ -107,9 +118,11 @@ public class PlayerController : MonoBehaviour
             pushCount++;
 
             // Play Sound
+            FindObjectOfType<AudioManager>().PlayOneShot("Jump");
+
         }
 
-        if(pushCount == 2)
+        if (pushCount == 2)
         {
             pushCount = 0;
             PlatformSpawner.instance.SpawnPlatforms();
@@ -120,7 +133,9 @@ public class PlayerController : MonoBehaviour
             isDead = true;
 
             //Play Sound
-            FindObjectOfType<AudioManager>().Play("PlayerDeath");
+            FindObjectOfType<AudioManager>().PlayOneShot("PlayerDeath");
+
+            PlayerPrefs.SetInt("HasPlayed", 1);
 
             restartButton.ShowRestart();
         }

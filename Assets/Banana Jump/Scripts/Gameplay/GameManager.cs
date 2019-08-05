@@ -10,8 +10,14 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        //PlayerPrefs.DeleteAll();
+
         if (instance == null)
             instance = this;
+        else
+        {
+            Destroy(gameObject);
+        }
 
         DontDestroyOnLoad(this.gameObject);
     }
